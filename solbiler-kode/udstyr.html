@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solbiler</title>
+    <link rel="stylesheet" href="https://use.typekit.net/atx0kbs.css">
+    <link rel="shortcut icon" href="./billeder/logo-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./css/udstyr.css">
+</head>
+<body>
+    <header>
+        <figure>
+            <a href="./index.html"><img src="./billeder/logo-icon.png" alt="Solbiler"></a>
+        </figure>
+        <nav class="icon">
+            <span class="line line0"></span>
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+        </nav>
+        <div class="item item0">
+            <a href="./omos.html">OM OS</a>
+        </div>
+        <div class="item item1">
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </header>
+    <section id="bil-info">   
+        <div class="hovedindhold">
+            <aside id="lejeoplysninger" class="lejeoplysninger">
+            </aside>
+            <aside id="totaldkk" class="totaldkk">
+                <div id="totalindhold" class="totalindhold">ALT INKLUSIV:</div>
+            </aside>
+            <img src="./billeder/citroen1.png" alt="citroen">
+        </div>
+    </section>
+    <section class="udstyrssektion">
+        <p>Vælg ekstraudstyr</p>
+        <form class="formular" id="formular" action="kunde.html">
+            <div class="flexsektion">
+                <label>Ekstra chauffør kr. 199,00<input type="checkbox" data-udstyr="Ekstra chauffør" class="checkboks" value="199.00"></label>
+                <label>Barnesæde (5-12 år) kr. 155,00<input type="checkbox" data-udstyr="Barnesæde (5-12 år)" class="checkboks" value="155.00"></label>
+                <label>Vejhjælp+ kr. 120,00<input type="checkbox" class="checkboks" data-udstyr="Vejhjælp+" value="120.00"></label>
+                <label>Lift-net (0-1 år) kr. 100,00<input type="checkbox" class="checkboks" data-udstyr="Lift-net (0-1 år)" value="100.00"></label>
+            </div>
+            <div class="flexsektion">
+                <label>Barnesæde (1-4 år) kr. 140,00<input type="checkbox" data-udstyr="Barnesæde (1-4 år)" class="checkboks" value="140.00"></label>
+                <label>GPS navigation kr. 250,00<input type="checkbox" data-udstyr="GPS navigation" class="checkboks" value="250.00"></label>
+                <label>Snekæder kr. 188,00<input type="checkbox" data-udstyr="Snekæder" class="checkboks" value="188.00"></label>
+              
+            </div>
+              <button class="videreknap">Videre</button>
+        </form>
+    </section>
+<script src="./js/udstyr.js"></script>
+</body>
+</html>

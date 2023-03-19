@@ -1,0 +1,249 @@
+/*
+Yvirskrift-
+font-family: "ethnocentric", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Farvir-
+myrka blatt: #00122f , rgb(1,18,47)
+ljosa blatt: #00235d
+gult: #fda521
+hvitt: #f1f6fb
+*/
+
+/*=======FÆLLES========*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #00122f;
+}
+
+h1 {
+    font-family: "ethnocentric", sans-serif;
+    color: #f1f6fb;
+    font-size: 1.8rem;
+    cursor: default;
+}
+
+h1 span {
+    font-family: "ethnocentric", sans-serif;
+    color: #fda521;
+}
+
+span {
+    color: #fda521;
+    text-transform: capitalize;
+}
+
+/*=======HEADER========*/
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background: transparent;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1;
+}
+
+header figure img {
+    width: 80px;
+}
+
+nav i {
+    color: #fda521;
+    font-size: 2.5rem;
+}
+
+.icon {
+    width: 50px;
+    height: 35px;
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    transition: 1s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 14%;
+    background-color: #fda521;
+    border-radius: 4px;
+    transform-origin: center;
+    transition: 0.3s all linear;
+}
+
+.line0 {
+    top: 0;
+}
+
+.line1 {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.line2 {
+    top: 100%;
+    transform: translateY(-100%);
+}
+
+.iconClick  .line0 {
+    top: 50%;
+    transform: translate(0, -50%) rotate(45deg);
+}
+
+.iconClick  .line1 {
+    width: 0;
+    opacity: 0;
+}
+
+.iconClick  .line2 {
+    top: 50%;
+    transform: translate(0, -50%) rotate(-45deg);
+}
+
+.iconClick {
+    right: 220px;
+    transition: 0.7s;
+}
+
+.item {
+    color: #f1f6fb;
+    position: absolute;
+    right: 40px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.item0 {
+    right: 100px;
+}
+
+.item0 a {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #f1f6fb;
+}
+
+.item1 {
+    font-size: 2rem;
+}
+
+.itemShow {
+    opacity: 1;
+    transition: 1s;
+}
+
+/*=======MAIN========*/
+
+.overskrift {
+    padding-left: 24px;
+}
+
+#info-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: top;
+    background: radial-gradient(#012b6f, #00235d, #00122f);
+    min-height: 650px;
+    margin: 0 30px;
+}
+
+.lejeoplysninger {
+    width: 450px;
+    padding: 20px 50px;
+    border-left: 1px solid #fda521;
+    color: #f1f6fb;
+    line-height: 1.5em;
+}
+
+.udstyrssektion {
+    max-width: 700px;
+    padding: 20px;
+}
+
+.formular {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin: 30px 5px 0 0;
+    color: #fda521;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+label:nth-child(5) {
+    text-transform: none;
+}
+
+.checkboks {
+    margin-top: 10px;
+}
+
+.flexsektion {
+    width: 275px;
+    margin: 25px;
+}
+
+.formfelt {
+    padding: 5px;
+    background: #f1f6fb;
+    border: 2px solid #012b6f;
+}
+
+.videreknap {
+    cursor: pointer;
+    padding: 5px 40px;
+    margin-left: 27px;
+    margin-top: 50px;
+    background: #fda521;
+    border: none;
+    color: #00235d;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.totaldkk {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.totalindhold {
+    padding: 10px 0;
+    font-size: 1.2rem;
+    padding-bottom: 25px;
+    line-height: 1.7em;
+}
+
+.formfelt {
+    width: 275px
+}
+
+#postnr {
+    width: 100px;
+}

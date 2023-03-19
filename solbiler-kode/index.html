@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solbiler</title>
+    <link rel="stylesheet" href="https://use.typekit.net/atx0kbs.css">
+    <link rel="shortcut icon" href="./billeder/logo-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="bg-wrap">
+<header>
+    <figure>
+        <a href="./index.html"><img src="./billeder/logo-icon.png" alt="Solbiler"></a>
+    </figure>
+    <nav class="icon">
+        <span class="line line0"></span>
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+    </nav>
+    <div class="item item0">
+        <a href="./omos.html">OM OS</a>
+    </div>
+    <div class="item item1">
+        <i class="fa-solid fa-user"></i>
+    </div>
+</header>
+<section id="intro">
+    <div id="intro-text">
+    <h1><span>Sol</span>Biler</h1>
+    <p>Find den perfekte bil til dig og din familje at udleje <br> til jeres næste evintyr</p>
+    </div>
+    <a href="#book"><i class="fa-solid fa-chevron-down"></i></a>
+</section>
+</div>
+<section class="billed_sektion" id="book">
+    <h1><span>book</span>ing</h1>
+    <form id="formular" class="formular" action="" method="">
+        <div class="formular_felter">
+            <div class="form">
+                <label for="afhentning" class="etiket">Henter</label>
+                <input type="date" id="afhentning" required>
+            </div>
+
+            <div class="form">
+                <label for="aflevering" class="etiket">afleverer</label>
+                <input type="date" id="aflevering" required>
+            </div>
+
+            <div class="form">
+                <label for="personer" class="etiket">personer</label>
+                <input type="number" value="1" id="personer" max="7" min="1" required>
+            </div>
+
+            <div class="form">
+                <label for="kufferter" class="etiket">kufferter</label>
+                <select id="kufferter">
+                    <option value="0">0 - kun taske</option>
+                    <option value="1">1 kuffert</option>
+                    <option value="2">2 kufferter</option>
+                    <option value="3">3 kufferter</option>
+                    <option value="4">4 kufferter</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="formular_knap">
+            <button id="knap" class="knap" type="submit">Søg</button>
+        </div>
+    </form>
+</section>
+
+<section class="bil_sektion" id="bil_sektion"></section>
+
+    <template id="skabelon_output">
+        <div class="bil">
+            <img>
+            <div class="bilMM"></div>
+            <div class="bildetaljer">
+                <div class="kategori">Kategori: </div>
+                <div class="antalpersoner">Personer: </div>
+                <div class="antalkufferter">Kufferter: </div>
+            </div>
+            <div class="prisogbook">
+                <div class="lejeudgift"></div>
+                <a href="#" class="booknu_knap">Book</a>
+            </div>
+        </div>
+    </template>
+<script src="./js/javascript.js"></script>
+</body>
+</html>

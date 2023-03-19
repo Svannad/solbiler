@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solbiler</title>
+    <link rel="stylesheet" href="https://use.typekit.net/atx0kbs.css">
+    <link rel="shortcut icon" href="./billeder/logo-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./css/kunde.css">
+</head>
+<body>
+    <header>
+        <figure>
+            <a href="./index.html"><img src="./billeder/logo-icon.png" alt="Solbiler"></a>
+        </figure>
+        <nav class="icon">
+            <span class="line line0"></span>
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+        </nav>
+        <div class="item item0">
+            <a href="./omos.html">OM OS</a>
+        </div>
+        <div class="item item1">
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </header>
+    <section id="info-wrap">
+    <section class="udstyrssektion">
+        <h1 class="overskrift"><span>Dine</span> oplysninger</h1>
+        <form class="formular" id="formular">
+            <div class="flexsektion">
+                <label>Fornavn</label><input type="text" id="fornavn" class="formfelt" tabindex="1" required>
+                <label>Vejnavn</label><input type="text" id="vejnavn" class="formfelt" tabindex="3" required>
+                <label>POSTNR. OG BY</label><input type="text" list="pbliste" id="postnr" class="formfelt" style="width: 275px;" tabindex="5" required>
+            </div>
+            <div class="flexsektion">
+                <label>Efternavn</label><input type="text" id="efternavn" class="formfelt" tabindex="2" required>
+                <label>Nr./etage</label><input type="text" id="vejnr" class="formfelt" tabindex="4" required>
+                <label><input type="checkbox" class="checkboks" style="margin-top: 30px;" tabindex="6" required> Jeg er fyldt 18 år</label>
+            </div>
+            <button type="submit" class="videreknap" id="videreknap" tabindex="7">Book</button>
+        </form>
+    </section>
+    <datalist id="pbliste"></datalist>
+    <aside id="lejeoplysninger" class="lejeoplysninger">
+        <h1><span>Leje</span>oplysninger</h1>
+        <div id="totalindhold" class="totalindhold"></div>
+    </aside>
+    </section>
+<script src="./js/kunde.js"></script>
+</body>
+</html>

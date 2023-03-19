@@ -1,0 +1,362 @@
+/*
+Yvirskrift-
+font-family: "ethnocentric", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+mapbox://styles/svannad/clfei64l9000a01p4xt5c7cxs
+
+Farvir-
+myrka blatt: #00122f , rgb(1,18,47)
+ljosa blatt: #00235d
+gult: #fda521
+hvitt: #f1f6fb
+*/
+
+/*=======FÆLLES========*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f1f6fb;
+}
+
+body {
+    background: #00122f;
+}
+
+h1 {
+    font-family: "ethnocentric", sans-serif;
+    color: #f1f6fb;
+    font-size: 1.8rem;
+    cursor: default;
+    padding-bottom: 10px;
+}
+
+h1 span {
+    font-family: "ethnocentric", sans-serif;
+    color: #fda521;
+}
+
+span {
+    color: #fda521;
+    text-transform: capitalize;
+}
+
+/*=======HEADER========*/
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background: transparent;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1;
+}
+
+header figure img {
+    width: 80px;
+}
+
+nav i {
+    color: #fda521;
+    font-size: 2.5rem;
+}
+
+.icon {
+    width: 50px;
+    height: 35px;
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    transition: 1s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 14%;
+    background-color: #fda521;
+    border-radius: 4px;
+    transform-origin: center;
+    transition: 0.3s all linear;
+}
+
+.line0 {
+    top: 0;
+}
+
+.line1 {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.line2 {
+    top: 100%;
+    transform: translateY(-100%);
+}
+
+.iconClick  .line0 {
+    top: 50%;
+    transform: translate(0, -50%) rotate(45deg);
+}
+
+.iconClick  .line1 {
+    width: 0;
+    opacity: 0;
+}
+
+.iconClick  .line2 {
+    top: 50%;
+    transform: translate(0, -50%) rotate(-45deg);
+}
+
+.iconClick {
+    right: 220px;
+    transition: 0.7s;
+}
+
+.item {
+    color: #f1f6fb;
+    position: absolute;
+    right: 40px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.item0 {
+    right: 100px;
+}
+
+.item0 a {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #f1f6fb;
+    font-weight: bold;
+}
+
+.item1 {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.item0 a:hover, .item1 i:hover {
+    color: #fda521;
+}
+
+.itemShow {
+    opacity: 1;
+    transition: 1s;
+}
+
+/*=======MAIN========*/
+
+#papir {
+    position: absolute;
+    opacity: 0;
+}
+
+#kvittering {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(#012b6f, #00235d, #00122f);
+    min-height: 600px;
+    margin: 10px 50px;
+    padding: 10px 0;
+    line-height: 1.5em;
+}
+
+.formular {
+    padding: 20px 0;
+}
+
+#op-wrap {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-items: end;
+    justify-content: space-between;
+    width: 70%;
+    padding: 10px 0;
+}
+
+#lejeoplysninger {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-items: end;
+    justify-content: space-around;
+    width: 70%;
+    padding: 10px 0;
+}
+
+#totalindhold {
+    padding-bottom: 10px;
+}
+
+.videreknap {
+    cursor: pointer;
+    padding: 5px 40px;
+    background: #fda521;
+    border: none;
+    color: #00235d;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+#how-to {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 1.5em;
+    background-image: url(../billeder/landingpage-img.jpg);
+    background-size: cover;
+    width: auto;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    min-height: 700px;
+    margin-top: 50px;
+}
+
+#how-to::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(to bottom, #00122f, rgb(1,18,47,0.1));
+}
+
+#how-to p {
+    width: 60%;
+    padding-top: 20px;
+}
+
+#how-to p, #how-to h1, #how-to h3, #how-to iframe {
+    z-index: 1;
+} 
+
+#how-to h3 {
+    padding: 50px 0 20px 0;
+}
+
+@media print {
+
+    * {
+        color: #00122f;
+    }
+
+    header, #how-to, .videreknap, a, .udstyrssektion h1, .udstyrssektion h3 {
+        display: none;
+    }
+
+    p {
+        color: #00122f;
+    }
+
+    span {
+        color: #00122f;
+    }
+
+    h1 {
+        font-family: "ethnocentric", sans-serif;
+        color: #00235d;
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+    
+    h1 span {
+        font-family: "ethnocentric", sans-serif;
+        color: #ffba24;
+    }
+
+    #kvittering {
+        align-items: start;
+    }
+
+    #papir {
+        position: relative;
+        opacity: 1;
+        width: 100%;
+        text-align: left;
+    }
+
+    #papir img {
+        width: 100px;
+        position: absolute;
+        top: 40;
+        right: 0;
+    }
+
+    #papir h1 {
+        padding-top: 150px;
+    }
+
+    .formular {
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .formular span {
+        font-weight: normal;
+    }
+
+    #pap {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #00122f;
+        font-size: 1.2rem;
+    }
+
+    #pap span {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #00122f;
+    }
+
+    #op-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    #lejeoplysninger {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: #00122f 2px solid;
+    }
+
+    #lejeoplysninger div {
+        padding-right: 30px;
+    }
+
+    #totalindhold {
+        border-bottom: #00122f 5px double;
+        width: 100%;
+    }
+
+}

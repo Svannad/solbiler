@@ -1,0 +1,360 @@
+/*
+Yvirskrift-
+font-family: "ethnocentric", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Farvir-
+myrka blatt: #00122f , rgb(1,18,47)
+ljosa blatt: #00235d
+gult: #fda521
+hvitt: #f1f6fb
+*/
+
+/*=======FÆLLES========*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #00122f;
+}
+
+h1 {
+    font-family: "ethnocentric", sans-serif;
+    color: #f1f6fb;
+    font-size: 4rem;
+    cursor: default;
+}
+
+h1 span {
+    font-family: "ethnocentric", sans-serif;
+    color: #fda521;
+}
+
+p {
+    color: #f1f6fb;
+    font-size: 1.3rem;
+    line-height: 2em;
+    cursor: default;
+}
+
+/*=======BG WRAP========*/
+
+.bg-wrap {
+    background-image: url(../billeder/landingpage-img.jpg);
+    background-size: cover;
+    width: auto;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    min-height: 780px;
+}
+
+.bg-wrap::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 780px;
+    background: linear-gradient(to top, #00122f, rgb(1,18,47,0.1));
+    z-index: 0;
+}
+
+/*=======HEADER========*/
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background: transparent;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 0;
+}
+
+header figure img {
+    width: 80px;
+}
+
+nav i {
+    color: #fda521;
+    font-size: 2.5rem;
+}
+
+.icon {
+    width: 50px;
+    height: 35px;
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    transition: 1s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 14%;
+    background-color: #fda521;
+    border-radius: 4px;
+    transform-origin: center;
+    transition: 0.3s all linear;
+}
+
+.line0 {
+    top: 0;
+}
+
+.line1 {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.line2 {
+    top: 100%;
+    transform: translateY(-100%);
+}
+
+.iconClick  .line0 {
+    top: 50%;
+    transform: translate(0, -50%) rotate(45deg);
+}
+
+.iconClick  .line1 {
+    width: 0;
+    opacity: 0;
+}
+
+.iconClick  .line2 {
+    top: 50%;
+    transform: translate(0, -50%) rotate(-45deg);
+}
+
+.iconClick {
+    right: 220px;
+    transition: 0.7s;
+}
+
+.item {
+    color: #f1f6fb;
+    position: absolute;
+    right: 40px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.item0 {
+    right: 100px;
+}
+
+.item0 a {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #f1f6fb;
+    font-weight: bold;
+}
+
+.item1 {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.item0 a:hover, .item1 i:hover {
+    color: #fda521;
+}
+
+.itemShow {
+    opacity: 1;
+    transition: 1s;
+}
+
+/*=======LANDING PAGE========*/
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+    min-height: 580px;
+    padding-top: 100px;
+}
+
+#intro p {
+    font-size: 1.7rem;
+    padding-top: 25px;
+}
+
+#intro h1 {
+    font-size: 6rem;
+}
+
+#intro a {
+    color: #f1f6fb;
+    font-size: 4rem;
+}
+
+/*=======BOOKING========*/
+
+.billed_sektion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 780px;
+}
+
+.formular {
+    position: relative;
+    width: 70%;
+    height: 400px;
+    background: radial-gradient(#023890, #012b6f, #00235d, #00122f);
+    padding: 15px;
+    font-family: 'Itim', cursive;
+    margin-top: 25px;
+}
+
+.formular_felter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form {
+    margin: 40px;
+}
+
+#afhentning, #aflevering, #personer {
+    width: 15rem;
+    text-align: right;
+    padding: 10px;
+    background: #f1f6fb;
+    border: 3px solid #00235d;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#kufferter {
+    width: 16.5rem;
+    padding: 13px;
+    background: #f1f6fb;
+    border: 3px solid #00235d;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.etiket {
+    margin: 15px 0 5px;
+    display: block;
+    color: #fda521;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: default;
+}
+
+.formular_knap {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.knap {
+    cursor: pointer;
+    padding: 5px 40px;
+    background: #fda521;
+    border: none;
+    color: #00235d;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.knap:hover {
+    color: #f1f6fb;
+}
+
+/*=======SØG BILER========*/
+
+.bil_sektion {
+    padding: 50px 0;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+}
+
+.bil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(#023890, #012b6f, #00235d, #00122f);
+    padding: 15px;
+    width: 350px;
+    margin: 30px;
+}
+
+.bil img {
+    width: 300px;
+}
+
+.bilMM {
+    font-family: "ethnocentric", sans-serif;
+    color: #f1f6fb;
+    font-size: 1.7rem;
+    padding: 15px 0;
+}
+
+.bildetaljer {
+    color: #f1f6fb;
+    text-align: center;
+    line-height: 2em;
+}
+
+.prisogbook {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+}
+
+.lejeudgift {
+    font-size: 1.5rem;
+    color: #f1f6fb;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.booknu_knap {
+    cursor: pointer;
+    padding: 5px 40px;
+    background: #fda521;
+    border: none;
+    color: #00235d;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.booknu_knap:hover {
+    color: #f1f6fb;
+}

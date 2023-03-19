@@ -1,0 +1,258 @@
+/*
+Yvirskrift-
+font-family: "ethnocentric", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Farvir-
+myrka blatt: #00122f , rgb(1,18,47)
+ljosa blatt: #00235d
+gult: #fda521
+hvitt: #f1f6fb
+*/
+
+/*=======FÆLLES========*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #00122f;
+}
+
+h1 {
+    font-family: "ethnocentric", sans-serif;
+    color: #f1f6fb;
+    font-size: 4rem;
+    cursor: default;
+}
+
+h1 span {
+    font-family: "ethnocentric", sans-serif;
+    color: #fda521;
+}
+
+p {
+    color: #f1f6fb;
+    font-size: 1.3rem;
+    line-height: 2em;
+    cursor: default;
+}
+
+span {
+    color: #fda521;
+    text-transform: capitalize;
+}
+
+/*=======HEADER========*/
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background: transparent;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1;
+}
+
+header figure img {
+    width: 80px;
+}
+
+.icon {
+    width: 50px;
+    height: 35px;
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    transition: 1s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 14%;
+    background-color: #fda521;
+    border-radius: 4px;
+    transform-origin: center;
+    transition: 0.3s all linear;
+}
+
+.line0 {
+    top: 0;
+}
+
+.line1 {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.line2 {
+    top: 100%;
+    transform: translateY(-100%);
+}
+
+.iconClick  .line0 {
+    top: 50%;
+    transform: translate(0, -50%) rotate(45deg);
+}
+
+.iconClick  .line1 {
+    width: 0;
+    opacity: 0;
+}
+
+.iconClick  .line2 {
+    top: 50%;
+    transform: translate(0, -50%) rotate(-45deg);
+}
+
+.iconClick {
+    right: 220px;
+    transition: 0.7s;
+}
+
+.item {
+    color: #f1f6fb;
+    position: absolute;
+    right: 40px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.item0 {
+    right: 100px;
+}
+
+.item0 a {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #f1f6fb;
+    font-weight: bold;
+}
+
+.item1 {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.item0 a:hover, .item1 i:hover {
+    color: #fda521;
+}
+
+.itemShow {
+    opacity: 1;
+    transition: 1s;
+}
+
+/*=======UM BILIN========*/
+
+#bil-info {
+    display: flex;
+    justify-content: center;
+}
+
+.hovedindhold {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    background: radial-gradient(#012b6f, #00235d, #00122f);
+    width: 80%;
+}
+
+.hovedindhold img {
+    margin-right: -50px;
+    height: 240px;
+}
+
+.lejeoplysninger {
+    color: #f1f6fb;
+    line-height: 1.4em;
+    padding: 25px;
+    font-size: 1.2rem;
+}
+
+.lejeoplysninger h3 {
+    font-family: "ethnocentric", sans-serif;
+    font-size: 1.8rem;
+    margin-top: -30px;
+}
+
+.totaldkk {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.totalindhold {
+    padding: 10px;
+    color: #fda521;
+    font-size: 1.2rem;
+    padding-bottom: 25px;
+}
+
+/*=======EYKA UTSTYR========*/
+
+.udstyrssektion {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    background: radial-gradient(#012b6f, #00235d, #00122f);
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.udstyrssektion p {
+    font-size: 1.5rem;
+    color: #fda521;
+}
+
+.formular {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+label {
+    display: block;
+    text-align: right;
+    margin: 10px 5px 0 0;
+    padding: 10px;
+    color: #f1f6fb;
+    font-size: 1.1rem;
+}
+
+.checkboks {
+    margin-left: 10px;
+}
+
+.flexsektion {
+    width: 300px;
+    margin: 25px;
+}
+
+.videreknap {
+    cursor: pointer;
+    padding: 5px 40px;
+    background: #fda521;
+    border: none;
+    color: #00235d;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
